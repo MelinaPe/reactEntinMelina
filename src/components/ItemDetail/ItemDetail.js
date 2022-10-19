@@ -13,15 +13,18 @@ const ItemDetail = ({product}) => {
 
   return (
     <center>
-      <div className="card" style={{width: '18rem'}}>
-                                <img src={product.foto} alt={product.name} style={{ maxWidth: '100%' }} className="card-img-top"/>
-                                <div className="card-body">
-                                <h5 className="card-title">{product.name}</h5>
-                                <p className="card-text">Juguetes frágiles para alimentar la ternura del mundo</p>
-                                <button onClick={ ()=> onAdd() }>Agregar al carrito</button>
-                                </div>
-     </div>                           
-    </center>
+    <div className="card" style={{width: '18rem'}}>
+            <div key={product.id} className="card" style={{width: '18rem'}}>
+                        <img src={product.foto} alt={product.name} style={{ maxWidth: '100%' }} className="card-img-top"/>
+                        <div className="card-body">
+                        <h5 className="card-title">{product.name}</h5>
+                        <p className="card-text">Juguetes frágiles para alimentar la ternura del mundo</p>
+                        <button onClick={ ()=> onAdd() }>Agregar al carrito</button>
+                        </div>
+             </div>                          
+   </div>
+   </center>
+   
   )
 }
 

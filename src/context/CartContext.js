@@ -10,15 +10,15 @@ const CartContextProvider = ({children}) => {
     const [cartList, setCartList] = useState([])
 
     const addItem = (product) => {
-        setCartList(product)
+        setCartList([ ...cartList, product])
     }
     return (
-        <CartContextProvider value={{
+        <CartContext.Provider value={{
             cartList,
             addItem
         }}>
             {children}
-        </CartContextProvider>
+        </CartContext.Provider>
     )
 }
 
