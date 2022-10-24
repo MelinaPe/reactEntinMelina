@@ -10,7 +10,7 @@ const title = () => {
       margin:'1em',
       gap: '1em'
     }}>
-     <img src={foforologo}/>
+     <img src={foforologo} alt='logo'/>
     </div>
   )
 }

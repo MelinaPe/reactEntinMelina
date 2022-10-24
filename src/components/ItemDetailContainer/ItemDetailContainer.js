@@ -6,15 +6,15 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 
 const ItemDetailContainer = () => {
 
-  const [ product, setProduct ] = useState({})
-  const { idProducto } = useParams()
+  const [ product, setProduct ] = useState({}) // para fijarlo 
+  const { idProduct } = useParams() 
   useEffect(() => {
-    gFetch(idProducto)
+    gFetch(idProduct)
     .then (resp => { setProduct (resp)})
     .catch(err => console.log(err))
     .finally(() => console.log('finalizo'))
   }, [])
-
+console.log(product)
   
   return (
 

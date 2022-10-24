@@ -21,4 +21,11 @@ export const gFetch = (id) => {
         }
 
 
+// export const gFetchOne = (id) => {
+//     return new Promise (( res, rej ) => {
 
+//         setTimeout (()=>{
+//             res( {id: '1', name: 'fantasmita', price: '$1600', stock: 10, foto: require('../../assets/fotoproducto/fantasmas.jpeg')}, 3000)
+//         })
+//     })
+// }

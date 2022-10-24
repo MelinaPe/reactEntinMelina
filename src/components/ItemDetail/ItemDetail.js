@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useCartContext } from '../../context/CartContext'
+import ItemCount from '../ItemCount/ItemCount'
 
 
 const ItemDetail = ({product}) => {
 
+  const [isCount, setIsCount] = useState(false)
+
   const { addItem } = useCartContext()
 
-  const onAdd = (cantidad=2) => {
+  const onAdd = (cantidad=1) => {
     console.log('onAdd', cantidad)
     addItem({ ...product, cantidad } )
   }
@@ -22,7 +25,22 @@ const ItemDetail = ({product}) => {
                         <button onClick={ ()=> onAdd() }>Agregar al carrito</button>
                         </div>
              </div>                          
-   </div>
+     </div>
+     <div>
+      { 
+        isCount ? 
+         <ItemCount onAdd={onAdd}  stock={product.stock} init={1}></ItemCount>
+         :
+         <div>
+          {/* <Link to="/cart"> */}
+          <button>Finalizar compra</button>
+          {/* </Link> */}
+          {/* <Link to="/"> */}
+          <button>Seguir comprando</button>
+          {/* </Link> */}
+         </div>
+      }
+     </div>
    </center>
    
   )
