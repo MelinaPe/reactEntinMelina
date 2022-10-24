@@ -27,19 +27,19 @@ const ItemDetail = ({product}) => {
              </div>                          
      </div>
      <div>
-      { 
-        isCount ? 
+    
+        isCount 
          <ItemCount onAdd={onAdd}  stock={product.stock} init={1}></ItemCount>
-         :
-         <div>
-          {/* <Link to="/cart"> */}
+         
+         
+          {/* <Link to="/cart">
           <button>Finalizar compra</button>
           {/* </Link> */}
           {/* <Link to="/"> */}
-          <button>Seguir comprando</button>
+          {/* <button>Seguir comprando</button> */}
           {/* </Link> */}
-         </div>
-      }
+        
+      
      </div>
    </center>
    
