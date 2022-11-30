@@ -22,7 +22,7 @@ const ItemDetail = ({product}) => {
                         <div className="card-body">
                         <h5 className="card-title">{product.name}</h5>
                         <p className="card-text">Juguetes frágiles para alimentar la ternura del mundo</p>
-                        <button onClick={ ()=> onAdd() }>Agregar al carrito</button>
+                        {/* <button onClick={ ()=> onAdd() }>Agregar al carrito</button> */}
                         </div>
              </div>                          
      </div>
